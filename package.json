@@ -4,6 +4,9 @@
   "description": "Mojo Dojo Lingua Language - A compiler project",
   "main": "index.js",
   "author": "Matheus Izidio",
+  "repository": {
+    "url": "https://github.com/MIzidio/mdll"
+  },
   "license": "MIT",
   "type": "module"
 }
