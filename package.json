@@ -1,0 +1,9 @@
+{
+  "name": "mdll",
+  "version": "1.0.0",
+  "description": "Mojo Dojo Lingua Language - A compiler project",
+  "main": "index.js",
+  "author": "Matheus Izidio",
+  "license": "MIT",
+  "type": "module"
+}
