@@ -1,5 +1,5 @@
 # MDLL
 
-> Yet another JS compiler
+> Yet another C++ compiler
 
 This is a compiler project
