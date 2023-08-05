@@ -400,3 +400,4 @@ FodyWeavers.xsd
 # VS sln generated files
 *.vcxproj.filters
 *.vcxproj
+*.sln
