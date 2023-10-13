@@ -27,3 +27,86 @@ int main()
 		}
 	}
 }
+
+enum class SyntaxKind
+{
+	NumberToken
+};
+
+class SyntaxToken
+{
+public:
+	SyntaxToken(SyntaxKind kind, int position, const char* text)
+	{
+		p_kind = kind;
+		p_position = position;
+		p_text = text;
+	}
+
+	//SyntaxKind getKind() {
+	//	return p_kind;
+	//}
+
+	//int getPosition() {
+	//	return p_position;
+	//}
+
+	//std::string getText() {
+	//	return p_text;
+	//}
+
+public: 
+	SyntaxKind p_kind;
+	int p_position;
+	std::string p_text;
+};
+
+class Lexer
+{
+
+public:
+	Lexer(std::string text) : _text(m_text)
+	{
+		m_text = text;
+	}
+
+	SyntaxToken NextToken()
+	{
+		if (isdigit(Current()))
+		{
+			auto start = m_position;
+
+			while (isdigit(Current()))
+				Next();
+
+			auto length = m_position - start;
+			auto text = m_text.substr(start, length);
+		}
+	}
+
+	void setText(std::string _text)
+	{
+		this->m_text = _text;
+	}
+
+public:
+	const std::string _text;
+
+private:
+	std::string m_text;
+	int m_position;
+
+private:
+	char Current()
+	{
+		if (m_position >= m_text.length())
+			return '\0';
+
+		return m_text[m_position];
+	}
+
+	void Next()
+	{
+		m_position++;
+	}
+};
